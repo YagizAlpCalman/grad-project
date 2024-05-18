@@ -15,8 +15,8 @@ import type {
   FunctionReference,
 } from "convex/server";
 import type * as adventure from "../adventure.js";
-import type * as chat from "../chat";
-import type * as inventory from "../inventory";
+import type * as chat from "../chat.js";
+import type * as inventory from "../inventory.js";
 import type * as visualize from "../visualize.js";
 
 /**

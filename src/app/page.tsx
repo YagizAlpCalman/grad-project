@@ -25,7 +25,7 @@ export default function Main() {
             >
               <img
                 onClick={() => setSelectedCharacter(character)}
-                src={`/${character}.png`}
+                src={`/${character}.jpeg`}
                 className={
                   selectedCharacter === character ? "border border-white" : ""
                 }
