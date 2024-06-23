@@ -54,7 +54,7 @@ export const summarizeInventory = internalAction({
           please only give us JSON, no other output`,
         },
       ],
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo ",
     });
 
     const response = completion.choices[0].message.content ?? "";

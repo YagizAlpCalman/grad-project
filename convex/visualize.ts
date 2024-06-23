@@ -44,7 +44,7 @@ export const visualizeLatestEntries = internalAction({
           Please summerize using a single descriptive sentence.`,
         },
       ],
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo ",
     });
 
     const response = completion.choices[0].message.content ?? "";
