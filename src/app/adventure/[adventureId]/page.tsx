@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { useAction, useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import { Id } from "../../../../convex/_generated/dataModel";
@@ -35,7 +35,7 @@ export default function Adventure(props: {
 }) {
   const handlePlayerAction = useAction(api.chat.handlePlayerAction);
   const adventureId = props.params.adventureId;
-  const items = useQuery(api.inventory.getAllItems, {});
+  const items = useQuery(api.inventory.getAllItems, );
   const entries = useQuery(api.chat.getAllEntries, {
     adventureId,
   });
@@ -75,7 +75,7 @@ export default function Adventure(props: {
             <div className="flex gap-2">
               <Dice
                 size={40}
-                onRoll={(value) => setMessage(value.toString())}
+                onRoll={(value: { toString: () => SetStateAction<string>; }) => setMessage(value.toString())}
               />
               <form
                 className="flex gap-2"
@@ -151,7 +151,7 @@ export default function Adventure(props: {
                         <img
                           className="rounded-xl border-gray-500 border"
                           src={
-                            items.find((item) => item.itemName === itemName)
+                            items?.find((item) => item.itemName === itemName)
                               ?.imageUrl
                           }
                         />
