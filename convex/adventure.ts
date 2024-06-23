@@ -54,19 +54,32 @@ export const setupAdventureEntries = internalAction({
     When I am fighting enemies, please ask me to roll 6 sided dices, with a 1 being the worst outcome
     of the scenario, and a 6 being the best outcome of the scenario.  Do not roll the dice for me,
     I as the player should input this and you need to describe the outcome with my input.
-
-    During this entire time, please track my health points which will start at 10, 
-    my character class which is a ${adventure.characterClass}, and my inventory which will start with 
-    - a broad sword that deals a base damage of 1
-    - a bronze helmet
+    During this entire time, please track my health points which will start at 10,
+    check the adventurers class, and give the an appropriate inventory. Adventurer class is : ${adventure.characterClass}
+    one of the character class is a warrior, and my inventory which will start with if the character class is Warrior 
+    - a Great Axe that deals a base damage of 2
+    - a Crude Iron armor that has a 2 damage absorption 
     - an a health potion which heals for 3 hp
 
+    If the my characters class is Archer my inventory start with these items
+    - a Long Bow with 20 arrows that deals a base damage of 1 an can be shot in distance
+    - a leather armor that has a 1 damage absorption
+    - a Iron knife that deals a base damage of 1
+    - a health potion which heals for 3 hp 
+    
+    If the my characters class is Wizard my inventory start with these items
+    - a Staff that can create fireballs that deal 3 damage
+    - a Wizard robe that has a 0 damage absorption
+    - a Iron sword that deals a base damage of 1
+    - two health potion which heals for 3 hp 
+    
+
     the adventure should have some of the following
-    - the hero must clear out a dungeon from undead enemies
+    - the hero must clear out a dungeon from some kind of enemies
     - the dungeon has 3 levels
     - each level has 1 set of enemies to fight
     - the final level has a boss
-    - the final level has a chest filled with one steel sword which deals base damage of 2
+    - the final level has a chest filled with equipment that benefit the adventurer.
 
     Given this scenario, please ask the player for their initial actions.
 
