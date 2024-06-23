@@ -94,7 +94,7 @@ export const setupAdventureEntries = internalAction({
           content: input,
         },
       ],
-      model: "gpt-3.5-turbo ",
+      model: "gpt-3.5-turbo",
     });
     // const input = args.message;
     const response = completion.choices[0].message.content ?? "";
