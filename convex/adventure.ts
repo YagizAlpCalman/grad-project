@@ -68,7 +68,7 @@ export const setupAdventureEntries = internalAction({
     - a health potion which heals for 3 hp 
     
     If the my characters class is Wizard my inventory start with these items
-    - a Staff that can create fireballs that deal 3 damage
+    - a Staff that can create spells that deal 1-3 damage
     - a Wizard robe that has a 0 damage absorption
     - a Iron sword that deals a base damage of 1
     - two health potion which heals for 3 hp 
@@ -79,11 +79,12 @@ export const setupAdventureEntries = internalAction({
     - the dungeon has 3 levels
     - each level has 1 set of enemies to fight
     - the final level has a boss
-    - the final level has a chest filled with equipment that benefit the adventurer.
+    - the final level has a chest filled with treasure.
 
     Given this scenario, please ask the player for their initial actions.
+    YOU ALWAYS ASK FOR THE PLAYER FOR THE NEXT STEP. ALWAYS!!
 
-    PLEASE MAKE SURE TO NEVER ROLL FOR THE PLAYER.  YOU SHOULD ALWAYS ASK THE PLAYER FOR HIS NEXT STEPS.
+    MAKE SURE TO NEVER ROLL FOR THE PLAYER!!!!!!
   `;
 
     const completion = await openai.chat.completions.create({
@@ -93,7 +94,7 @@ export const setupAdventureEntries = internalAction({
           content: input,
         },
       ],
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo ",
     });
     // const input = args.message;
     const response = completion.choices[0].message.content ?? "";
