@@ -74,13 +74,6 @@ export const setupAdventureEntries = internalAction({
     - two health potion which heals for 3 hp 
     
 
-    the adventure should have some of the following
-    - the hero must clear out a dungeon from some kind of enemies
-    - the dungeon has 3 levels
-    - each level has 1 set of enemies to fight
-    - the final level has a boss
-    - the final level has a chest filled with treasure.
-
     Given this scenario, please ask the player for their initial actions.
     YOU ALWAYS ASK FOR THE PLAYER FOR THE NEXT STEP. ALWAYS!!
 
